@@ -1,0 +1,142 @@
+:root {
+  --bg-main: linear-gradient(135deg, #0f172a, #020617);
+  --bg-card: #1e293b;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --btn-main: #38bdf8;
+  --btn-hover: #0ea5e9;
+}
+
+body.light {
+  --bg-main: linear-gradient(135deg, #f8fafc, #e5e7eb);
+  --bg-card: #ffffff;
+  --text-main: #020617;
+  --text-muted: #475569;
+  --btn-main: #2563eb;
+  --btn-hover: #1d4ed8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.users-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: var(--bg-card);
+  width: 260px;
+  padding: 26px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #2a334a 25%,
+    #3b4563 37%,
+    #2a334a 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.skeleton-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 80%;
+  margin: 8px auto;
+  border-radius: 6px;
+}
+
+.refresh-btn {
+  padding: 12px 30px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--btn-main);
+  color: white;
+  margin-bottom: 14px;
+}
+
+.theme-toggle {
+  padding: 10px 26px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text-main);
+  cursor: pointer;
+}
