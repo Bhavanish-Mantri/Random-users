@@ -7,7 +7,7 @@ The project focuses on clean UI/UX, smooth animations, and good frontend develop
 
 ## 🌐 Live Demo
 
-Open `index.html` in a browser to run the project locally.
+https://bhavanish-mantri.github.io/Random-users/
 
 ---
 
